@@ -22,18 +22,18 @@ public class Movement : MonoBehaviour {
             verticalVelocity.y = 0;
         }
 
-        Vector3 horizontalVelocity = (transform.right * horizontalInput.x + transform.forward * horizontalInput.y) * speed;
+       Vector3 horizontalVelocity = (transform.right * horizontalInput.x + transform.forward * horizontalInput.y) * speed;
         controller.Move(horizontalVelocity * Time.deltaTime);
 
          //Jump: v = sqrt(-2 * jumpHeight * gravity)
-        if (jump) {
+         if (jump) {
             if (isGrounded) {
-                verticalVelocity.y = Mathf.Sqrt(-2f * jumpHeight * gravity);
+               verticalVelocity.y = Mathf.Sqrt(-2f * jumpHeight * gravity);
             }
-            jump = false;
+           jump = false;
         }
 
-        verticalVelocity.y += gravity * Time.deltaTime;
+       verticalVelocity.y += gravity * Time.deltaTime;
         controller.Move(verticalVelocity * Time.deltaTime);
     }
 
@@ -44,7 +44,7 @@ public class Movement : MonoBehaviour {
 
     public void OnJumpPressed ()
     {
-        jump = true;
+        //jump = true;
         
     }
 
