@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour {
     [SerializeField] float jumpHeight = 3.5f;
     bool jump;
 
-    [SerializeField] float gravity = -30f; // -9.81
+    [SerializeField] float gravity = -30;
     Vector3 verticalVelocity = Vector3.zero;
     [SerializeField] LayerMask groundMask;
     bool isGrounded;
@@ -44,7 +44,7 @@ public class Movement : MonoBehaviour {
 
     public void OnJumpPressed ()
     {
-        //jump = true;
+        jump = true;
         
     }
 

@@ -45,7 +45,7 @@ public class InputManager : MonoBehaviour {
 
     void StartFiring()
     {
-        // fireCoroutine = StartCoroutine(gun.RapidFire());
+       // fireCoroutine = StartCoroutine(gun.RapidFire());
     }
 
     void StopFiring()
